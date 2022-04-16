@@ -1,0 +1,52 @@
+:root {
+  --purple: #1e1e28;
+  --yellow: #ffc107;
+  --scrollbarBG: #252530;
+  --thumbBG: gray;
+}
+body {
+  background: var(--purple);
+}
+.content-bg {
+  background-color: var(--purple);
+  color: white;
+}
+.card-bg {
+  background-color: var(--scrollbarBG);
+  color: white;
+}
+a.nav-link {
+  color: white;
+}
+a.nav-link:hover {
+  color: var(--yellow);
+}
+.bg-yellow {
+  color: var(--yellow);
+}
+.img {
+  width: 150px;
+  height: 150px;
+}
+.content-bg::-webkit-scrollbar {
+  width: 10px;
+}
+.content-bg::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.content-bg::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+.d-grid.gap-3.col-div {
+  grid-template-columns: 0.7fr 2fr;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: var(--purple);
+}
