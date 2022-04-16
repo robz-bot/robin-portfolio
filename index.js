@@ -2,15 +2,28 @@ const btn = document.getElementById("sendBtn");
 document.getElementById("myForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    btn.value = "Sending...";
-
     const serviceID = YOUR_SERVICE_ID;
     const templateID = YOUR_TEMPLATE_ID;
-    console.log(this);
+    var getfields = document.forms["myForm"];
+    if (
+        getfields["name"].value == "" ||
+        getfields["name"].value == undefined ||
+        getfields["name"].value == null ||
+        getfields["email"].value == "" ||
+        getfields["email"].value == undefined ||
+        getfields["email"].value == null ||
+        getfields["message"].value == "" ||
+        getfields["message"].value == undefined ||
+        getfields["message"].value == null
+    ) {
+        alert("Fill all the fields!");
+        return false;
+    }
+    btn.value = "Sending...";
     emailjs.sendForm(serviceID, templateID, this).then(
         () => {
             btn.value = "Send";
-            document.getElementById("myForm").reset()
+            document.getElementById("myForm").reset();
             alert("Sent!");
         },
         (err) => {
@@ -26,3 +39,8 @@ var YOUR_SERVICE_ID = "service_j6kg9lu";
     emailjs.init(YOUR_PUBLIC_KEY);
     // emailjs.init('R_LcwJ8roLn5DVXjm')
 })();
+
+function visitsCount(response) {
+    console.log(response.value);
+    document.getElementById("visitorCount").innerText = response.value;
+}
