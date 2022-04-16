@@ -39,8 +39,3 @@ var YOUR_SERVICE_ID = "service_j6kg9lu";
     emailjs.init(YOUR_PUBLIC_KEY);
     // emailjs.init('R_LcwJ8roLn5DVXjm')
 })();
-
-function visitsCount(response) {
-    console.log(response.value);
-    document.getElementById("visitorCount").innerText = response.value;
-}
