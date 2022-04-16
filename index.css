@@ -1,52 +1,85 @@
 :root {
-  --purple: #1e1e28;
-  --yellow: #ffc107;
-  --scrollbarBG: #252530;
-  --thumbBG: gray;
-}
-body {
-  background: var(--purple);
-}
-.content-bg {
-  background-color: var(--purple);
-  color: white;
-}
-.card-bg {
-  background-color: var(--scrollbarBG);
-  color: white;
-}
-a.nav-link {
-  color: white;
-}
-a.nav-link:hover {
-  color: var(--yellow);
-}
-.bg-yellow {
-  color: var(--yellow);
-}
-.img {
-  width: 150px;
-  height: 150px;
-}
-.content-bg::-webkit-scrollbar {
-  width: 10px;
-}
-.content-bg::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
-}
-.content-bg::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG);
-  border-radius: 6px;
-  border: 3px solid var(--scrollbarBG);
+    --purple: #1e1e28;
+    --yellow: #ffc107;
+    --scrollbarBG: #252530;
+    --thumbBG: gray;
 }
 
-.d-grid.gap-3.col-div {
-  grid-template-columns: 0.7fr 2fr;
+body {
+    background: var(--purple);
 }
+
+.content-bg {
+    background-color: var(--purple);
+    color: white;
+}
+
+.card-bg {
+    background-color: var(--scrollbarBG);
+    color: white;
+}
+
+a.nav-link {
+    color: white;
+}
+
+a.nav-link:hover {
+    color: var(--yellow);
+}
+
+.bg-yellow {
+    color: var(--yellow);
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
 .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link,
+.nav-pills .show>.nav-link,
 .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: var(--purple);
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: var(--purple);
+}
+
+input#email,
+input#name,
+textarea#message {
+    background-color: var(--scrollbarBG);
+}
+
+input#email:focus,
+input#name:focus,
+textarea#message:focus {
+    background-color: var(--scrollbarBG);
+    color: white;
+}
+
+.form-control {
+    color: white;
+}
+
+.zoom {
+    transition: transform 0.3s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
